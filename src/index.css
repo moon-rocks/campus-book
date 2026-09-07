@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-cards";
+
+:root {
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif-heading: 'Newsreader', 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-brand: #4f46e5;
+  --color-brand-dark: #4338ca;
+  --color-brand-light: #eef2ff;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #0f172a;
+  background-color: #F5F7FC;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif-heading {
+  font-family: var(--font-serif-heading);
+  letter-spacing: -0.02em;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Cursor styles (desktop only) */
+.custom-cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #4f46e5;
+  border-radius: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+.custom-cursor-ring {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(79, 70, 229, 0.4);
+  border-radius: 50%;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.custom-cursor-ring.active-hover {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(79, 70, 229, 0.08);
+  border-color: rgba(79, 70, 229, 0.7);
+}
+
+.custom-cursor-label {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #4338ca;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-cursor-label.visible {
+  opacity: 1;
+}
+
+/* Swiper custom arrows and dots */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #4f46e5 !important;
+  background: white;
+  width: 31px !important;
+  height: 31px !important;
+  min-width: 31px !important;
+  min-height: 31px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 12px !important;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #eef2ff;
+  color: #4338ca !important;
+  transform: scale(1.08);
+}
+
+.swiper-pagination-bullet-active {
+  background: #4f46e5 !important;
+  width: 24px !important;
+  border-radius: 4px !important;
+}
+
+/* Selection */
+::selection {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+/* Hero Department Swiper Custom Styles */
+.hero-dept-swiper {
+  overflow: visible !important;
+}
+
+.hero-dept-swiper .swiper-slide {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-dept-swiper .swiper-pagination {
+  position: relative !important;
+  margin-top: 12px !important;
+}
+
+.hero-dept-swiper .swiper-pagination-bullet {
+  background: #cbd5e1;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.hero-dept-swiper .swiper-pagination-bullet-active {
+  background: #4f46e5 !important;
+  width: 22px !important;
+  border-radius: 9999px !important;
+}
+
+/* Browse by Branch and Campus Section Swiper Navigation Buttons */
+#browse-by-branch-section .swiper-button-prev,
+#browse-by-branch-section .swiper-button-next,
+#campus-section .swiper-button-prev,
+#campus-section .swiper-button-next {
+  width: 31px !important;
+  height: 31px !important;
+  min-width: 31px !important;
+  min-height: 31px !important;
+}
+
+#browse-by-branch-section .swiper-button-prev:after,
+#browse-by-branch-section .swiper-button-next:after,
+#campus-section .swiper-button-prev:after,
+#campus-section .swiper-button-next:after {
+  font-size: 12px !important;
+}
+
+/* Campus Section Swiper Buttons (Dark Theme) */
+#campus-section .swiper-button-prev,
+#campus-section .swiper-button-next {
+  background: rgba(30, 41, 59, 0.95) !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(71, 85, 105, 0.7) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+#campus-section .swiper-button-prev:hover,
+#campus-section .swiper-button-next:hover {
+  background: #4338ca !important;
+  color: #ffffff !important;
+  border-color: #6366f1 !important;
+}
+
+/* Specific selector fallbacks for target elements */
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section#browse-by-branch-section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2),
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section#browse-by-branch-section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3),
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section#campus-section:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2),
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section#campus-section:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) {
+  height: 31px !important;
+  width: 31px !important;
+}
+
+
+

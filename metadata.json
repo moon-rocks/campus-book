@@ -1,0 +1,8 @@
+{
+  "name": "Remix Campus Book",
+  "description": "Campus Book - “Your Books. Your Campus. Your Marketplace.” A student-powered academic marketplace connecting Government Polytechnic and B.Tech colleges across Bihar and beyond.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
