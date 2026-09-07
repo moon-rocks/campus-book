@@ -172,7 +172,7 @@ const AppContent: React.FC = () => {
 export default function App() {
   return (
     <MarketplaceProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <AppContent />
       </Router>
     </MarketplaceProvider>
