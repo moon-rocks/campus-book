@@ -34,8 +34,8 @@ jobs:
 
       - name: Build project
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://kltjndxfdfhxmqqlcpbo.supabase.co' }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'sb_publishable_QpxIwa_u3IZoPWtwsXd8Ig_zww15qC_' }}
         run: bun run build
 
       - name: Upload artifact
