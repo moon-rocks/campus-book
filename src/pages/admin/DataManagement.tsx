@@ -221,7 +221,7 @@ export const DataManagement: React.FC = () => {
           </div>
 
           {/* Primary Demo Data Control Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xs">
+          <div className="hidden bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xs">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 border border-amber-200/60 flex items-center justify-center">
